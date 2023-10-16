@@ -1,0 +1,37 @@
+
+* {
+    font-family: Yantramanav, Arial, Helvetica, sans-serif;
+}
+
+.subtitulo {
+    font-family: 'Hind Madurai', 'Times New Roman', Times, serif;
+}
+
+h1 {
+    font-family: Junge, Georgia, 'Times New Roman', Times, serif;
+}
+
+#myDiv {
+    background-color: #f2f7f5;
+}
+#informacion-personal {
+    background-color: #f2f7f5;
+}
+    
+.subtitulo > #myDiv {
+    color: #475d5b;
+}
+header {
+    margin: 20px;
+}
+.educacion {
+    margin-top: 10px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    margin-left: 40px;
+}
+    
+    
+
+
+        
