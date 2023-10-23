@@ -1,0 +1,37 @@
+main section:nth-child(2n) {
+    background-color: turquoise;
+  }
+  
+  main section:nth-child(2n+1) {
+    background-color: lightpink;
+  }
+  
+  /* Grid: AREAS */
+  main {
+    /* Modo de colocar los elementos internos en una rejilla */
+    display: grid; 
+    /* Separación entre filas */
+    row-gap: 0.5rem; 
+    /* Separación entre columnas */
+    column-gap: 0.5rem;
+     /* Nombres de las áreas*/
+     grid-template-areas: "A A B B"
+                          "A A B B"
+                          "D D Q Q"
+                          "D D Q Q";
+  }
+
+  #informacion-personal {
+    grid-area: A;
+  }
+  #educacion {
+    grid-area: B;
+  }
+
+  #experiencia {
+    grid-area: Q;
+  }
+
+  #habilidades {
+    grid-area: D;
+  }
