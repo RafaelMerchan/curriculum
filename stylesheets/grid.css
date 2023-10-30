@@ -15,10 +15,10 @@ main section:nth-child(2n) {
     /* Separación entre columnas */
     column-gap: 0.5rem;
      /* Nombres de las áreas*/
-     grid-template-areas: "A A B B"
-                          "A A B B"
-                          "D D Q Q"
-                          "D D Q Q";
+     grid-template-areas: "A A"
+                          "B B"
+                          "D D"
+                          "Q Q";
   }
 
   #informacion-personal {

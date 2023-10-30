@@ -1,64 +1,158 @@
-/*
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 * {
-    font-family: Yantramanav, Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.subtitulo {
-    font-family: 'Hind Madurai', 'Times New Roman', Times, serif;
-}
-
-h1 {
-    font-family: Junge, Georgia, 'Times New Roman', Times, serif;
+main {
+  background-color: rgb(17, 122, 48);
+  height: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  display: grid;
+  row-gap: 0.5rem;
+  column-gap: 0.5rem;
+  grid-template-areas:
+    "H H H H"
+    "A A B B"
+    "A A B B"
+    "D D Q C"
+    "D D Q C"
+    "G G G G";
 }
 
 #myDiv {
-    background-color: #f2f7f5;
+  background-color: #f2f7f5;
+  grid-area: H;
 }
+
 #informacion-personal {
-    background-color: #f2f7f5;
+  background-color: #f2f7f5;
+  padding: 20px;
+  margin: 20px 0;
+  grid-area: A;
 }
-    
-.subtitulo > #myDiv {
-    color: #475d5b;
+
+#educacion {
+  grid-area: B;
 }
-header {
-    margin: 20px;
+
+#experiencia {
+  grid-area: Q;
 }
-.educacion {
-    margin-top: 10px;
-    margin-right: 20px;
-    margin-bottom: 30px;
-    margin-left: 40px;
-}*/
 
-html, body {
-    height: 100%;
-    width: 100%;
-  }
-  
-  section, article {
-    border: 1px solid grey;
-    border-radius: 1%;
-    text-align: center
-  }
-  
-  body {
-    margin:  0;
-    padding: 0;
-  }
-  
-  nav {
-    width: 100%;
-    text-align: center;
-    padding: 2% 0 2% 0;
-  }
-  
-  main {
-    height: 100%;
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-    
+#habilidades {
+  grid-area: D;
+}
 
+#contacto {
+  background-color: #f2f7f5;
+  padding: 20px;
+  margin: 20px 0;
+  grid-area: C;
+}
 
-        
+#pie {
+  grid-area: G;
+}
+
+section, article, header {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: left;
+  padding: 20px;
+}
+
+nav {
+  width: 100%;
+  text-align: left;
+  padding: 2% 0;
+}
+
+.subtitulo {
+  font-family: 'Hind Madurai', 'Times New Roman', Times, serif;
+  text-align: center;
+  color: #475d5b;
+}
+
+h1 {
+  font-family: Junge, Georgia, 'Times New Roman', Times, serif;
+}
+
+main section:nth-child(2n) {
+  background-color: #e6f7f5;
+}
+
+main section:nth-child(2n+1) {
+  background-color: #f9d7e6;
+}
+
+.personal-info-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.personal-info-container img {
+  width: 150px;
+  height: 150px;
+  padding: 5px;
+  margin: 5px;
+  border: 2px solid #28e20f;
+  background-color: #5509e2;
+}
+
+.mapa {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mapa iframe {
+  flex: 1;
+}
+
+#educacion ul li ul .mapa {
+  grid-column: 2 / 3;
+  align-self: center;
+}
+
+#educacion ul li ul .mapa iframe {
+  width: 100%;
+  height: 100%;
+}
+
+#contacto form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+#contacto label {
+  display: block;
+  margin-top: 10px;
+}
+
+#contacto input[type="text"],
+#contacto input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+}
+
+#contacto input[type="submit"] {
+  display: block;
+  width: 100%;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+}
